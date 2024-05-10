@@ -16,7 +16,7 @@ date_matches = pat.match(date_string)
 # should extract a match where the first group is the number, the second the street, the
 # third the city, the fourth the state and the fifth the zip code
 address_string = "2501 Addison Street\nChicago, IL 60618"
-pat = re.compile("REPLACE ME", re.IGNORECASE)
+pat = re.compile(r"(\d+) (\w+ \w+)", re.IGNORECASE)
 address_matches = pat.match(address_string)
 
 # problem 3
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     print("<<<<< Hashtag Problem >>>>>\n")
     # uncomment the following prints to see results and asserts to test
     # print(f"hashtags are: {mats}") # should be ['cs', 'python', 'LT', 'champions']"
-    # assert mats == ['cs', 'python', 'LT', 'champions'], "Incorrect hashtags"
+    # assert hastag_matches == ['cs', 'python', 'LT', 'champions'], "Incorrect hashtags"
     # print('\n<<<< Hashtag extraction tests passed >>>>\n')
 
     # print('\n<<<< All tests passed! >>>>')
